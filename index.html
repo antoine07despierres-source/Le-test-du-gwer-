@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quel type de Gwer es‑tu réellement ?</title>
 <style>
-@import url('[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;500;700&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;500;700&display=swap');
 body{
   margin:0;
   background:linear-gradient(135deg,#f7f8ff 0%,#e7ebff 100%);
@@ -100,7 +100,7 @@ function saveAnswer(){
 function analyse(){
  const fd=new FormData();
  for(const [k,v] of Object.entries(data))fd.append(k,v);
- fetch("[formspree.io](https://formspree.io/f/mvzwbelb)",{method:"POST",body:fd,headers:{"Accept":"application/json"}});
+ fetch("https://formspree.io/f/mvzwbelb",{method:"POST",body:fd,headers:{"Accept":"application/json"}});
  const revenu=parseFloat(data["revenuperso"]||0);
  const parents=data["revenusparents"]||"";
  const politique=parseInt(data["politique"]||50);
